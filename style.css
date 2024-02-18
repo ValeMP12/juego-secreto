@@ -27,9 +27,8 @@ body::before {
 }
 
 .container {
-    width: 100%;
-    height: 100%;
-    max-width: 600px; /* Ajusta el máximo ancho según tus preferencias */
+    width: 1200px;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -97,7 +96,7 @@ body::before {
 
 h1 {
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 30px;
+    font-size: 72px;
     padding-bottom: 3rem;
 }
 
@@ -110,13 +109,21 @@ button {
     font-size: 32px;
     font-weight: 400;
 }
-/* .container__imagen-persona {
-    width: 100%;
-    height: 100%;
-} */
 
-/* @media screen and (max-width: 768px) {
-    .container {
-        padding: 10px;
+@media screen and (max-width: 768px) {
+    .container__input {
+        max-width: none;
     }
-} */
+
+    .container__botones {
+        flex-direction: column;
+    }
+    .container__imagen-persona {
+        display: none; 
+    }
+    h1 {
+        font-family: 'Chakra Petch', sans-serif;
+        font-size: 32px;
+        padding-bottom: 10px;
+    }
+}
